@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://homonosx.top</id>
     <title>Gridea</title>
-    <updated>2021-05-27T07:34:10.246Z</updated>
+    <updated>2021-05-27T07:40:34.291Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://homonosx.top"/>
     <link rel="self" href="https://homonosx.top/atom.xml"/>
@@ -10,6 +10,112 @@
     <logo>https://homonosx.top/images/avatar.png</logo>
     <icon>https://homonosx.top/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Swift]]></title>
+        <id>https://homonosx.top/post/swift/</id>
+        <link href="https://homonosx.top/post/swift/">
+        </link>
+        <updated>2021-05-27T07:39:53.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="继承">继承</h3>
+<blockquote>
+<ul>
+<li>面对多次继承后的协议，类必须实现其的全部方法(前提：继承自该协议的类)</li>
+</ul>
+</blockquote>
+<pre><code class="language-Swift">
+protocol V1 {
+	func sing()
+}
+
+protocol V2 {
+	func sing2()
+}
+
+protocol V3 : V1,V2{
+	func sing3()
+}
+
+
+extension V1 {
+	func sing() {
+		print(&quot;V1的sing&quot;)
+	}
+}
+
+class D3: V3 {
+
+	
+	func sing2() {
+		
+	}
+	
+	func sing3() {
+		
+	}
+	
+	
+}
+
+let d3 = D3()
+
+print(d3.sing())
+</code></pre>
+<h3 id="组合-类似于多继承">组合 (类似于多继承)</h3>
+<blockquote>
+<p>例如 Codable协议</p>
+</blockquote>
+<blockquote>
+<pre><code class="language-Swift">public typealias Codable = Decodable &amp; Encodable 
+</code></pre>
+</blockquote>
+<pre><code class="language-Swift">
+// 方式1：
+typealias V = V1&amp;V2
+
+// 方式2：
+protocol V4 : V1&amp;V2 {
+	
+}
+
+
+class D3: V4 {
+	func sing() {
+		
+	}
+	
+
+	
+	func sing2() {
+		
+	}
+	
+	
+}
+
+class D4: V4 {
+	
+	func sing() {
+		
+	}
+	
+	func sing2() {
+		
+	}
+	
+}
+let d3 = D3()
+
+print(d3.sing())
+
+</code></pre>
+<h3 id="协议和类之间的关系">协议和类之间的关系</h3>
+<h3 id="类继承协议">类继承协议</h3>
+<h3 id="协议和类组合">协议和类组合</h3>
+<blockquote>
+<p>继承自该组合协议后的类必须实现协议里边的方法，类里边的无需实现，调用时，创建对象，调用该类的方法即可，效果和单独继承自该类一样，如果方法名称相同，需要复写</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://homonosx.top/post/hello-gridea/</id>

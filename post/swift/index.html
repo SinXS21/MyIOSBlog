@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>Gridea | Gridea</title>
+<title>Swift | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -78,55 +78,128 @@
 
 
       <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Swift</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-05-27</span>
+            
+          </div>
+          <div class="post-content">
+            <h3 id="继承">继承</h3>
+<blockquote>
+<ul>
+<li>面对多次继承后的协议，类必须实现其的全部方法(前提：继承自该协议的类)</li>
+</ul>
+</blockquote>
+<pre><code class="language-Swift">
+protocol V1 {
+	func sing()
+}
 
-        <div class="current-tag-container">
-          <h2 class="title">
-            <i class="icon icon-pricetags-outline"></i> Gridea
-          </h2> 
+protocol V2 {
+	func sing2()
+}
+
+protocol V3 : V1,V2{
+	func sing3()
+}
+
+
+extension V1 {
+	func sing() {
+		print(&quot;V1的sing&quot;)
+	}
+}
+
+class D3: V3 {
+
+	
+	func sing2() {
+		
+	}
+	
+	func sing3() {
+		
+	}
+	
+	
+}
+
+let d3 = D3()
+
+print(d3.sing())
+</code></pre>
+<h3 id="组合-类似于多继承">组合 (类似于多继承)</h3>
+<blockquote>
+<p>例如 Codable协议</p>
+</blockquote>
+<blockquote>
+<pre><code class="language-Swift">public typealias Codable = Decodable &amp; Encodable 
+</code></pre>
+</blockquote>
+<pre><code class="language-Swift">
+// 方式1：
+typealias V = V1&amp;V2
+
+// 方式2：
+protocol V4 : V1&amp;V2 {
+	
+}
+
+
+class D3: V4 {
+	func sing() {
+		
+	}
+	
+
+	
+	func sing2() {
+		
+	}
+	
+	
+}
+
+class D4: V4 {
+	
+	func sing() {
+		
+	}
+	
+	func sing2() {
+		
+	}
+	
+}
+let d3 = D3()
+
+print(d3.sing())
+
+</code></pre>
+<h3 id="协议和类之间的关系">协议和类之间的关系</h3>
+<h3 id="类继承协议">类继承协议</h3>
+<h3 id="协议和类组合">协议和类组合</h3>
+<blockquote>
+<p>继承自该组合协议后的类必须实现协议里边的方法，类里边的无需实现，调用时，创建对象，调用该类的方法即可，效果和单独继承自该类一样，如果方法名称相同，需要复写</p>
+</blockquote>
+
+          </div>
         </div>
 
         
-<section class="post-item">
-    <div class="content">
-      <a href="https://homonosx.top/post/hello-gridea/">
-        <h2 class="post-title">Hello Gridea</h2>
-      </a>
-      <div class="post-abstract">
-        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
+          <div class="next-post">
+            <a class="purple-link" href="https://homonosx.top/post/hello-gridea/">
+              <h3 class="post-title">
+                下一篇：Hello Gridea
+              </h3>
+            </a>
+          </div>
+          
       </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2018-12-12</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://homonosx.top/tag/JR2iCurVp/">
-                Gridea
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://homonosx.top/post/hello-gridea/">
-        <div class="feature-container" style="background-image: url('https://homonosx.top/post-images/hello-gridea.png')">
-        </div>
-      </a>
-    
-  </section>
 
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
+      
 
       <div class="site-footer">
   <div class="slogan">温故而知新</div>
