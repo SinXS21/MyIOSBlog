@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://homonosx.top</id>
+    <id>https://homonosx.cn</id>
     <title>Gridea</title>
-    <updated>2021-05-27T05:06:42.514Z</updated>
+    <updated>2021-05-27T07:25:18.471Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://homonosx.top"/>
-    <link rel="self" href="https://homonosx.top/atom.xml"/>
+    <link rel="alternate" href="https://homonosx.cn"/>
+    <link rel="self" href="https://homonosx.cn/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://homonosx.top/images/avatar.png</logo>
-    <icon>https://homonosx.top/favicon.ico</icon>
+    <logo>https://homonosx.cn/images/avatar.png</logo>
+    <icon>https://homonosx.cn/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://homonosx.top/post/hello-gridea/</id>
-        <link href="https://homonosx.top/post/hello-gridea/">
+        <id>https://homonosx.cn/post/hello-gridea/</id>
+        <link href="https://homonosx.cn/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
